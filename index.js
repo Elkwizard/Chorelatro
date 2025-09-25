@@ -66,6 +66,8 @@ const computeChores = () => {
 	
 	const rotations = Math.ceil((new Date() - startDate) / MS_PER_WEEK);
 
+	alert(`rotations: ${rotations}, ms: ${new Date() - startDate}`);
+
 	const assignments = new Map(
 		rng.shuffle([...residents, ...residents])
 			.map((person, i) => [chores[i], [person]])
