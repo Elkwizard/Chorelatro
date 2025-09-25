@@ -1,0 +1,58 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+:root {
+	--title-font: "Comic Sans MS", Cursive, serif;
+}
+
+body {
+	background: lavender;
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+#wrapper {
+	width: 20em;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: white;
+	padding: 2em;
+	border-radius: 2em;
+}
+
+h1 {
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
+	border-bottom: 1px black solid;
+	font-family: var(--title-font);
+}
+
+#people {
+	width: 100%;
+
+	& > div {
+		padding-block: 1em;
+		width: 100%;
+
+		&:not(:last-child) {
+			border-bottom: 1px black solid;
+		}
+		
+		h2 {
+			border: 1px black solid;
+			display: inline-block;
+			padding: 0.1em 0.3em;
+			margin-bottom: 0.3em;
+			border-radius: 0.4em;
+			font-family: var(--title-font);
+		}
+	}
+}
