@@ -16,7 +16,7 @@ body {
 }
 
 #wrapper {
-	width: 20em;
+	width: 80vw;
 	height: 80dvh;
 	font-size: 3dvh;
 	display: flex;
