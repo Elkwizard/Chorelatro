@@ -104,19 +104,23 @@ const computeChores = () => {
 };
 
 const refresh = () => {
-	const mapping = computeChores();
-
-	const wrapper = $("#people");
-	wrapper.innerHTML = "";
-	for (const name of people) {
-		const chores = make("div");
-		chores.appendChild(make("h2", name));
-		const choreBox = make("div");
-		for (const chore of mapping.get(name))
-			choreBox.appendChild(make("div", chore));
-		chores.appendChild(choreBox);
-
-		wrapper.appendChild(chores);
+	try {
+		const mapping = computeChores();
+	
+		const wrapper = $("#people");
+		wrapper.innerHTML = "";
+		for (const name of people) {
+			const chores = make("div");
+			chores.appendChild(make("h2", name));
+			const choreBox = make("div");
+			for (const chore of mapping.get(name))
+				choreBox.appendChild(make("div", chore));
+			chores.appendChild(choreBox);
+	
+			wrapper.appendChild(chores);
+		}
+	} catch (err) {
+		alert(err.stack);
 	}
 };
 

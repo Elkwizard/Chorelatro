@@ -28,6 +28,7 @@ body {
 
 h1 {
 	text-transform: uppercase;
+	font-size: 6vh;
 	margin-bottom: 0.5em;
 	border-bottom: 1px black solid;
 	font-family: "Jersey 25";
@@ -35,6 +36,7 @@ h1 {
 
 #people {
 	width: 100%;
+	font-size: 2.5vh;
 
 	& > div {
 		padding-block: 1em;
