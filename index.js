@@ -120,7 +120,7 @@ const refresh = () => {
 			wrapper.appendChild(chores);
 		}
 	} catch (err) {
-		alert(err.stack);
+		alert(err + "\n" + err.stack);
 	}
 };
 
