@@ -64,7 +64,7 @@ const next = {
 const computeChores = () => {
 	rng.seed = 12345;
 	
-	const rotations = Math.floor((new Date() - startDate) / MS_PER_WEEK);
+	const rotations = Math.ceil((new Date() - startDate) / MS_PER_WEEK);
 
 	const assignments = new Map(
 		rng.shuffle([...residents, ...residents])

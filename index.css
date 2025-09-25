@@ -1,12 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jersey+25&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
-}
-
-:root {
-	--title-font: "Comic Sans MS", Cursive, serif;
 }
 
 body {
@@ -32,7 +30,7 @@ h1 {
 	text-transform: uppercase;
 	margin-bottom: 0.5em;
 	border-bottom: 1px black solid;
-	font-family: var(--title-font);
+	font-family: "Jersey 25";
 }
 
 #people {
@@ -52,7 +50,7 @@ h1 {
 			padding: 0.1em 0.3em;
 			margin-bottom: 0.3em;
 			border-radius: 0.4em;
-			font-family: var(--title-font);
+			font-family: "Jersey 25";
 		}
 	}
 }
