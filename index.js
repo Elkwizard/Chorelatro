@@ -39,7 +39,7 @@ const rng = {
 	}
 };
 
-const startDate = new Date("9:53 PM, 9/24/2025");
+const startDate = new Date("9/24/2025");
 
 const chores = [
 	"Unload Dishwasher",
@@ -65,8 +65,6 @@ const computeChores = () => {
 	rng.seed = 12345;
 	
 	const rotations = Math.ceil((new Date() - startDate) / MS_PER_WEEK);
-
-	alert(`rotations: ${rotations}, ms: ${new Date() - startDate}, date: ${new Date()}, start: ${startDate}`);
 
 	const assignments = new Map(
 		rng.shuffle([...residents, ...residents])
@@ -106,23 +104,19 @@ const computeChores = () => {
 };
 
 const refresh = () => {
-	try {
-		const mapping = computeChores();
-	
-		const wrapper = $("#people");
-		wrapper.innerHTML = "";
-		for (const name of people) {
-			const chores = make("div");
-			chores.appendChild(make("h2", name));
-			const choreBox = make("div");
-			for (const chore of mapping.get(name))
-				choreBox.appendChild(make("div", chore));
-			chores.appendChild(choreBox);
-	
-			wrapper.appendChild(chores);
-		}
-	} catch (err) {
-		alert(err + "\n" + err.stack);
+	const mapping = computeChores();
+
+	const wrapper = $("#people");
+	wrapper.innerHTML = "";
+	for (const name of people) {
+		const chores = make("div");
+		chores.appendChild(make("h2", name));
+		const choreBox = make("div");
+		for (const chore of mapping.get(name))
+			choreBox.appendChild(make("div", chore));
+		chores.appendChild(choreBox);
+
+		wrapper.appendChild(chores);
 	}
 };
 
