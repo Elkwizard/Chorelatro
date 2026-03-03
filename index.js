@@ -53,7 +53,7 @@ const chores = [
 const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
 
 const residents = people.filter(person => person !== "Maya");
-const gamblers = ["H", "Jake"];
+const gamblers = ["H", "Jake", "Quinn"];
 
 const next = {
 	H: "Jake",
