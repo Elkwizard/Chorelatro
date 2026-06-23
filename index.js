@@ -67,8 +67,12 @@ const computeChores = () => {
 	
 	const rotations = Math.ceil((new Date() - startDate) / MS_PER_WEEK);
 
+	const tiledResidents = new Array(Math.ceil(chores.length / residents.length) * residents.length)
+		.fill()
+		.map((_, i) => residents[i % residents.length]);
+
 	const assignments = new Map(
-		rng.shuffle([...residents, ...residents])
+		rng.shuffle(tiledResidents)
 			.map((person, i) => [chores[i], [person]])
 	);
 
@@ -98,6 +102,7 @@ const computeChores = () => {
 	
 
 	const mapping = new Map(people.map(person => [person, []]));
+	
 	for (const [chore, people] of assignments)
 		mapping.get(people[rotations - 1]).push(chore);
 	
