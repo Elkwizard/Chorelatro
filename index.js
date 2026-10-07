@@ -6,7 +6,7 @@ const make = (tag, content) => {
 	return result;
 };
 
-const people = ["Jake", "Quinn", "Maya"];
+const people = ["H", "Quinn", "Jake", "Maya"];
 
 const rng = {
 	seed: 1234,
@@ -54,12 +54,12 @@ const chores = [
 const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
 
 const residents = people.filter(person => person !== "Maya");
-const gamblers = ["Jake", "Quinn"];
+const gamblers = ["Jake", "Quinn", "H"];
 
 const next = {
-	// H: "Quinn",
-	Jake: "Quinn",
-	Quinn: "Jake"
+	H: "Quinn",
+	Quinn: "Jake",
+	Jake: "H"
 };
 
 const computeChores = () => {
